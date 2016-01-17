@@ -1,5 +1,5 @@
 #NFS Client setup
 
-yum install nfs-utils nfs-utils-lib
+apt-get install nfs-utils nfs-utils-lib
 
-mount 12.34.56.789:/home /mnt/nfs/home
+192.168.11.99:/Share  /mnt/array1/Share nfs auto,noatime,nolock,bg,nfsvers=3,intr,tcp,actimeo=1800 0 0
