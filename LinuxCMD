@@ -1,5 +1,12 @@
-#NFS Client setup
-
+##NFS Client setup
 apt-get install nfs-utils nfs-utils-lib
-
 192.168.11.99:/Share  /mnt/array1/Share nfs auto,noatime,nolock,bg,nfsvers=3,intr,tcp,actimeo=1800 0 0
+
+##SSH Server Setup
+vi /etc/ssh/sshd_config #enable root account
+#comment out the below line
+PermitRootLogin without-password 
+#add the following line.
+PermitRootLogin yes
+#Restart
+service ssh restart
